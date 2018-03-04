@@ -1,0 +1,134 @@
+.about{
+  position: relative;
+  background: radial-gradient(at 31.47% 91.09%, #02B2FF 0%, #1185EB 34.41%, #5869FF 70.4%, #7983FF 100%);
+  padding-bottom: 200px;
+
+  @media (max-width: 768px) {
+    padding-bottom: 125px;
+  }
+  &:after{
+    max-width: 1422px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 0;
+    content: '';
+    height: 524px;
+    background: url("../img/illustration.png") no-repeat center bottom / 100%;
+
+  }
+  @media (max-width: 768px) {
+    &:after{
+      left: 0;
+      transform: none;
+      height: 394px;
+      background: url("../img/illustration768.png") no-repeat center bottom / 100%;
+    }
+  }
+  @media (max-width: 320px) {
+    &:after{
+      height: 302px;
+      background: url("../img/illustration320.png") no-repeat center bottom / 100%;
+    }
+  }
+  .container{
+    position: relative;
+    @media (max-width: 768px) {
+      padding: 0;
+    }
+
+  }
+  &__top{
+    padding-top: 160px;
+    padding-bottom: 15px;
+    text-align: center;
+    @media (max-width: 768px) {
+      padding: 140px 15px 90px;
+    }
+    @media (max-width: 480px) {
+      padding-top: 90px;
+      padding-bottom: 0;
+    }
+    &__image{
+      width: 245px;
+      margin: 55px auto 15px;
+      @media (max-width: 480px) {
+        width: 160px;
+        margin: 35px auto;
+      }
+    }
+    &__title{
+      font-size: 46px;
+      letter-spacing: -1.81579px;
+      color: #ffffff;
+      line-height: 1.22;
+      @include rubikMedium();
+      @media (max-width: 480px) {
+        font-size: 36px;
+      }
+      span{
+        white-space: nowrap;
+        font-size: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        text-transform: uppercase;
+      }
+    }
+    &__name{
+      font-size: 36px;
+      letter-spacing: -1.42105px;
+      color: #ffffff;
+      line-height: 1.22;
+      @media (max-width: 480px) {
+        font-size: 24px;
+      }
+    }
+  }
+  &__content{
+    &__image{
+      z-index: 1;
+      position: relative;
+      display: block;
+      max-width: 1043px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    &__image768{
+      z-index: 1;
+      position: relative;
+      max-width: 100%;
+      width: 100%;
+      display: none;
+    }
+    &__image320{
+      display: none;
+      z-index: 1;
+      position: relative;
+      max-width: 100%;
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      &__image{
+        display: none;
+      }
+      &__image768{
+        display: block;
+      }
+    }
+    @media (max-width: 480px) {
+      &__image320{
+        width: 306px;
+        margin: 0 auto;
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 93px;
+      }
+      &__image768{
+        display: none;
+      }
+    }
+  }
+
+}
