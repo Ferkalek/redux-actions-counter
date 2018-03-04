@@ -1,0 +1,67 @@
+.faq-for-clients{
+  &__title{
+    @include rubikRegular();
+    @include pageTitle();
+  }
+  &__subtitle{
+    @include rubikRegular();
+    @include pageSubTitle();
+  }
+  &__wrap{
+    @include pageWrap();
+  }
+  &__content{
+    @include pageContent();
+    p{
+      @include paragraph();
+    }
+  }
+  &__left{
+    @include pageLeft();
+    a{
+      @include tabsLink();
+      @include rubikMedium();
+      @extend .transition-color;
+    }
+    @media (max-width: 768px) {
+      ul{
+        @include tabsMob();
+      }
+    }
+  }
+  &__right{
+    @include pageRight();
+    .item{
+      @include pageItem();
+    }
+    a{
+      @include pageRightLink();
+    }
+    li{
+      @include pageRightList();
+    }
+  }
+  .arrow{
+    @include arrow();
+  }
+  .spoiler{
+    &__item{
+      @include spoilerItem();
+      &.opened{
+        @include spoilerItemOpened();
+      }
+    }
+    .arrow{
+      @include spoilerArrrow();
+    }
+    &__title{
+      @include spoilerTitle();
+      @include rubikRegular();
+      @include pageSubTitle();
+    }
+    &__content{
+      display: none;
+    }
+  }
+}
+
